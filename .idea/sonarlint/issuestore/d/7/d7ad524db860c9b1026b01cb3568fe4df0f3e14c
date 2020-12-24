@@ -1,0 +1,27 @@
+
+Q
+java:S1128"4Remove this unused import 'util.CustomLogFormatter'.(ÕÒù®8ğë•é.
+D
+java:S1068"'Remove this unused "LOG" private field.( ŞàÊ8¯Éú•é.
+Y
+java:S2629T"7Use the built-in formatting to construct this argument.(·²Ÿ½øÿÿÿÿ8¡ğù•é.
+]	java:S125$"<This block of commented-out lines of code should be removed.(–ƒÃ·üÿÿÿÿ8¯Éú•é.
+U	java:S106B"9Replace this use of System.out or System.err by a logger.(¤òŠÊ8¡ğù•é.
+G
+java:S2116Q"%Use "Arrays.toString(array)" instead.(»Á¼Œşÿÿÿÿ8¡ğù•é.
+]	java:S125""<This block of commented-out lines of code should be removed.(Ùìˆ‡øÿÿÿÿ8ÊŒâ•é.
+m
+java:S3457T"KFormat specifiers or lambda should be used instead of string concatenation.(·²Ÿ½øÿÿÿÿ8¡ğù•é.
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.( ŞàÊ8”üù”é.
+T	java:S1064"9Replace this use of System.out or System.err by a logger.(Çú›+8¡ğù•é.
+U	java:S106<"9Replace this use of System.out or System.err by a logger.(Ÿš·³8¡ğù•é.
+Z	java:S106Q"9Replace this use of System.out or System.err by a logger.(»Á¼Œşÿÿÿÿ8¡ğù•é.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡©¬ëüÿÿÿÿ
+X	java:S125W"<This block of commented-out lines of code should be removed.(æîâö8¡ğù•é.
+U	java:S106V"9Replace this use of System.out or System.err by a logger.(«”­8¡ğù•é.
+S
+java:S1128"6Remove this unused import 'jdk.jshell.execution.Util'.(œ¾Õï8©ßÅ”é.
+]
+java:S1128";Remove this unused import 'java.util.logging.Level.SEVERE'.(…·Şüÿÿÿÿ8íúß•é.
+T	java:S106A"9Replace this use of System.out or System.err by a logger.(Çú›+8¡ğù•é.
