@@ -15,19 +15,23 @@ public class MultipartTest {
   HttpClient httpClient;
   HttpRequest httpRequest;
   HttpResponse<String> httpResponse;
-  public static final String ADDRESS= "http://hjyoun.ddns.net:19124";
+  public static final String ADDRESS= "http://localhost:3000";
   HashMap<Object, Object> map = new HashMap<>();
 
 
   public void multipartPost () throws IOException {
     Path path = Path.of("가르쳐줘 코딩 소녀_v1.5_apkpure.com.apk");
+//    Path path = Path.of("HelloWorld.java");
     String uploadPath = ADDRESS + "/upload";
     BigInteger randomNumber = new BigInteger(256, new Random());
-    StringBuilder boundary = new StringBuilder().append("--").append(randomNumber);
+    StringBuilder boundary = new StringBuilder().append(randomNumber);
 
     map.put("id", "1");
     map.put("test", "this is test");
-    map.put("file", path);
+    map.put("test1", "this is test1");
+    map.put("test2", "this is test2");
+    map.put("test3", "this is test3");
+    map.put("ttt", path);
 
     httpClient = HttpClient.newHttpClient();
     multipartToByte(map, boundary.toString());
@@ -36,7 +40,7 @@ public class MultipartTest {
     httpRequest = HttpRequest.newBuilder()
         .uri(URI.create(uploadPath))
         .setHeader("Accept-Language", "ko")
-        .setHeader("Content-type", "multipart/form-data: boundary=" + boundary)
+        .setHeader("Content-Type", "multipart/form-data; boundary=" + boundary)
         .PUT(multipartToByte(map, boundary.toString()))
         .build();
 
@@ -53,19 +57,18 @@ public class MultipartTest {
     StringBuilder stringBuilder = new StringBuilder();
 
     for (Map.Entry<Object, Object> data : map.entrySet()) {
-      if (stringBuilder.length() != 0) {
-        stringBuilder.setLength(0);
-        stringBuilder.append(boundary).append("\r\n");
-      }
+      System.out.println(stringBuilder);
+      stringBuilder.setLength(0);
+      stringBuilder.append("--").append(boundary).append("\r\n");
 
       if (data.getValue() instanceof Path) {
         Path filePath = (Path)data.getValue();
         String mimeType = Files.probeContentType(filePath);
         byte[] fileByte = Files.readAllBytes(filePath);
 
-        stringBuilder.append("Content-Disposition: form-data; name:\"")
+        stringBuilder.append("Content-Disposition: form-data; name=\"")
             .append(data.getKey())
-            .append("\"; filename: \"")
+            .append("\"; filename= \"")
             .append(data.getValue())
             .append("\"\r\n")
             .append("Content-Type: ")
@@ -74,12 +77,13 @@ public class MultipartTest {
 
         byteArrays.add(stringBuilder.toString().getBytes(StandardCharsets.UTF_8));
         byteArrays.add(fileByte);
+        byteArrays.add("\r\n".getBytes(StandardCharsets.UTF_8));
       } else {
-        stringBuilder.append("Content-Disposition: form-data; name:\"")
+        stringBuilder.append("Content-Disposition: form-data; name=\"")
             .append(data.getKey())
-            .append("\"\r\n\r\n")
-            .append(data.getValue());
-
+            .append("\";\r\n\r\n")
+            .append(data.getValue())
+            .append("\r\n");
         byteArrays.add(stringBuilder.toString().getBytes(StandardCharsets.UTF_8));
       }
     }
