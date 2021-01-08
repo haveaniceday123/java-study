@@ -15,8 +15,9 @@ public class Operator2 {
 
     Logger logger = Log.getLOG();
 
-    logger.info(a + "은(는) " + b + " 와(과) 같습니까? " + d);
-    logger.info(a + "은(는) " + b + " 와(과) 다릅니까? " + e);
+    logger.info(() -> a + "은(는) " + b + " 보다 큽니까? " + c);
+    logger.info(() -> a + "은(는) " + b + " 와(과) 같습니까? " + d);
+    logger.info(() -> a + "은(는) " + b + " 와(과) 다릅니까? " + e);
   }
 
   public static void main(String[] args) {
