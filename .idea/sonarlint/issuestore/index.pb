@@ -21,3 +21,19 @@ U
 logback.xml,4\f\4f3024d2366a944a34a4c3cbe4d4b05f30ae9b6e
 W
 'src/main/java/myHttp/MultipartTest.java,9\3\932d93fcc78143770770dc1d4a58bc624dc33ddc
+X
+(src/main/java/JavaBase/Loggging/Log.java,b\c\bc596efb974be9dd7b4c9f698a2071c0acb89d1d
+[
++src/main/java/JavaBase/Day01/Operator2.java,3\a\3a7c8ce52cca93ab8d40609884852e09eed55f99
+[
++src/main/java/JavaBase/Day02/Operator3.java,8\b\8bd31b43f80f2ba73e17219046404b157b7b593c
+Y
+)src/main/java/JavaBase/Day02/IfExam2.java,e\c\ec624330bc5f180d5d0fd5dedad32635c7cd9e81
+V
+&src/main/java/myHttp/DownloadFile.java,c\b\cb9be18443139f86af2f556a09762f359da5f849
+T
+$src/main/java/JavaBase/Day02/If.java,7\b\7b714c61a8273ecafb19c4dff5bec211e7b27e14
+X
+(src/main/java/JavaBase/Day02/IfExam.java,9\d\9d07fd73eeac355f3aa8d22cf39e3ba919803c34
+a
+1src/main/java/JavaBase/Day02/LogicalOperator.java,9\c\9cc69217abcb523f6946c2222803c274296ac735

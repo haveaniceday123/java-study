@@ -1,0 +1,14 @@
+
+d
+java:S2095"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(–ºÚÜ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡©¬ëüÿÿÿÿ
+u	java:S116
+"[Rename this field "OUTPUT_FILE_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( úÃŸÿÿÿÿÿ
+h	java:S116"SRename this field "FILE_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÌì”
+<
+java:S1170
+"!Make this final field static too.( úÃŸÿÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(üÌì”
+Z
+java:S2147"DCombine this catch with the one at line 22, which has the same body.(ï­£Ä
